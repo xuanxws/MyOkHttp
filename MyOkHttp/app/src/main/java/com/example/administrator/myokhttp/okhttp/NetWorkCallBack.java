@@ -6,7 +6,7 @@ package com.example.administrator.myokhttp.okhttp;
  */
 
 public interface  NetWorkCallBack<T> {
-    void onSuccess(T result);
+    void onSuccess(T result,String objectFrom);
 
     void onError(String hint);
 }

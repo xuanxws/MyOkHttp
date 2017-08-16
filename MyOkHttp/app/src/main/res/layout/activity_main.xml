@@ -1,19 +1,124 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.administrator.myokhttp.MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+              android:visibility="visible">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <RelativeLayout
+        android:id="@+id/ll_name"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_name_title"
+            style="@style/member_info_item_title"
+            android:text="姓名"/>
+
+        <EditText
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@+id/tv_name_title"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:hint="请输入姓名"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#707070"
+            android:textColorHint="#bebebe"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_zjlx"
+        style="@style/member_info_item_layout"
+        android:background="#ffffff">
+
+        <TextView
+            style="@style/member_info_item_title"
+            android:text="证件类型"/>
+
+        <TextView
+            android:id="@+id/tv_zjlx"
+            style="@style/member_info_item_content"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_zjhm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/tv_zjhm_title"
+            style="@style/member_info_item_title"
+            android:text="证件号码"/>
+
+
+        <EditText
+            android:id="@+id/tv_zjhm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@+id/tv_zjhm_title"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:hint="请输入证件号码"
+            android:maxLines="1"
+            android:textColor="#707070"
+            android:textColorHint="#bebebe"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_sex"
+        style="@style/member_info_item_layout"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/member_info_item_title"
+            android:text="性别"/>
+
+
+        <TextView
+            android:id="@+id/tv_sex"
+            style="@style/member_info_item_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_birthday"
+        style="@style/member_info_item_layout"
+        android:background="#ffffff">
+
+        <TextView
+            style="@style/member_info_item_title"
+            android:text="出生日期"/>
+
+        <TextView
+            android:id="@+id/tv_birthday"
+            style="@style/member_info_item_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

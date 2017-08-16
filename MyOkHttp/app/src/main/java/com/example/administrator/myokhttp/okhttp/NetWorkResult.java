@@ -1,15 +1,17 @@
 package com.example.administrator.myokhttp.okhttp;
 
+import java.io.Serializable;
+
 /**
  * Created by Administrator on 2017/8/14.
  */
 
-public class NetWorkResult {
+public class NetWorkResult implements Serializable{
 
    private int status;
     private String msg;
     private String data;
-    private String request_timesmap;
+    private String request_timestamp;
 
     public int getStatus() {
         return status;
@@ -35,11 +37,11 @@ public class NetWorkResult {
         this.data = data;
     }
 
-    public String getRequest_timesmap() {
-        return request_timesmap;
+    public String getRequest_timestamp() {
+        return request_timestamp;
     }
 
-    public void setRequest_timesmap(String request_timesmap) {
-        this.request_timesmap = request_timesmap;
+    public void setRequest_timestamp(String request_timestamp) {
+        this.request_timestamp = request_timestamp;
     }
 }
